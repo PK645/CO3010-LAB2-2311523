@@ -1,0 +1,25 @@
+!SESSION 2025-09-24 10:19:22.818 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_VN
+Framework arguments:  -keyring /Users/khanh/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/khanh/.eclipse_keyring -data /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-09-24 10:19:32.697
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-09-24 10:19:32.698
+!MESSAGE Log4j2 initialized with config file /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-09-24 10:19:37.174
+!MESSAGE Started RMI Server, listening on port 41340
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2025-09-24 10:19:37.202
+!MESSAGE ProjectImporter: mdfind -name lsregister didn't returned anything
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-09-24 10:47:58.634
+!MESSAGE Indexed 'LAB2' (17 sources, 78 headers) in 4.51 sec: 3,636 declarations; 13,164 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.012%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-09-24 11:58:46.238
+!MESSAGE Indexed 'LAB2' (20 sources, 80 headers) in 1.5 sec: 4,911 declarations; 29,712 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0058%)
