@@ -654,3 +654,67 @@
 2025-09-24 11:46:22,295 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2715mS.
 2025-09-24 11:46:22,297 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
 2025-09-24 11:46:22,299 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-09-24 12:22:46,326 [INFO] WebApp:194 - Connection lost
+2025-09-24 12:22:47,856 [INFO] WebApp:191 - Connection restablished
+2025-09-24 12:26:10,991 [INFO] WebApp:194 - Connection lost
+2025-09-24 12:26:11,344 [INFO] WebApp:191 - Connection restablished
+2025-09-24 12:46:50,809 [INFO] WebApp:194 - Connection lost
+2025-09-24 13:08:02,461 [INFO] WebApp:191 - Connection restablished
+2025-09-24 13:08:51,274 [INFO] WebApp:194 - Connection lost
+2025-09-24 13:09:00,364 [INFO] WebApp:191 - Connection restablished
+2025-09-24 13:12:13,699 [INFO] WebApp:194 - Connection lost
+2025-09-24 13:12:41,972 [INFO] WebApp:191 - Connection restablished
+2025-09-24 13:12:46,133 [INFO] WebApp:194 - Connection lost
+2025-09-24 13:12:51,140 [INFO] WebApp:191 - Connection restablished
+2025-09-24 13:13:22,257 [INFO] WebApp:194 - Connection lost
+2025-09-24 13:13:23,681 [INFO] WebApp:191 - Connection restablished
+2025-09-24 13:13:30,410 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 13:13:30.403 ERROR Chromium process exit code: 139
+2025-09-24 13:13:30,413 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-09-24 13:13:30,414 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 13:13:30.414 ERROR Crash dump dir: /Users/khanh/Library/Application Support/JxBrowser/7.41.4/CrashReports
+2025-09-24 13:13:30,414 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-09-24 13:13:30,418 [ERROR] WebApp:412 - JxBrowser engine crashed! Exit code: 139
+2025-09-24 13:29:57,886 [INFO] NvicTabbedPanel:226 - Cannot restore the selected Tab for NVIC
+2025-09-24 13:32:03,482 [INFO] NvicTabbedPanel:226 - Cannot restore the selected Tab for NVIC
+2025-09-24 13:32:05,642 [INFO] NvicTabbedPanel:226 - Cannot restore the selected Tab for NVIC
+2025-09-24 13:32:35,152 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 358939720 Bytes (754974720)
+2025-09-24 13:32:36,692 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 415846936 Bytes (754974720)
+2025-09-24 13:32:38,861 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 537197592 Bytes (754974720)
+2025-09-24 13:32:39,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-09-24 13:32:39,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-09-24 13:32:39,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-09-24 13:32:39,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-09-24 13:32:39,269 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8F1
+2025-09-24 13:32:39,270 [INFO] CodeGenerator:892 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.15.0.202507011659//db/
+2025-09-24 13:32:39,407 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/MXTmpFiles/license.tmp_save
+2025-09-24 13:32:39,757 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/MXTmpFiles/license.tmp
+2025-09-24 13:32:39,799 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/MXTmpFiles/gpio.tmp_save
+2025-09-24 13:32:39,963 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/MXTmpFiles/gpio.tmp
+2025-09-24 13:32:40,009 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Src/stm32f1xx_it.c_save
+2025-09-24 13:32:40,239 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Src/stm32f1xx_it.c
+2025-09-24 13:32:40,242 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Inc/stm32f1xx_it.h_save
+2025-09-24 13:32:40,329 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Inc/stm32f1xx_it.h
+2025-09-24 13:32:40,334 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Src/stm32f1xx_hal_msp.c_save
+2025-09-24 13:32:40,480 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Src/stm32f1xx_hal_msp.c
+2025-09-24 13:32:40,482 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/MXTmpFiles/system.tmp_save
+2025-09-24 13:32:40,559 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/MXTmpFiles/system.tmp
+2025-09-24 13:32:40,562 [INFO] CodeEngine:321 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Inc/stm32f1xx_hal_conf.h_save
+2025-09-24 13:32:40,645 [INFO] CodeEngine:345 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Inc/stm32f1xx_hal_conf.h
+2025-09-24 13:32:40,659 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-09-24 13:32:40,660 [WARN] CodeGenerator:4259 - IP not found : null
+2025-09-24 13:32:40,662 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Inc/main.h_save
+2025-09-24 13:32:40,796 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Inc/main.h
+2025-09-24 13:32:40,798 [INFO] CodeEngine:265 - oldGeneratedFile, /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Src/main.c_save
+2025-09-24 13:32:40,969 [INFO] CodeEngine:289 - Generated code: /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/Core/Src/main.c
+2025-09-24 13:32:41,153 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 45mS.
+2025-09-24 13:32:41,157 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-09-24 13:32:41,246 [INFO] ConfigFileManager:1595 - The Die is : DIE412
+2025-09-24 13:32:42,454 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2025-09-24 13:32:44,444 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 3272mS.
+2025-09-24 13:32:44,456 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-09-24 13:32:44,460 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-09-24 13:32:46,591 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Connect timed out
+2025-09-24 13:32:47,927 [ERROR] ConfigurationRetriever:142 - IOException on connection: Connect timed out
+2025-09-24 13:32:51,598 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Connect timed out
+2025-09-24 13:32:56,600 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Connect timed out
+2025-09-24 13:33:01,604 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Connect timed out
+2025-09-24 13:33:06,609 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Connect timed out
