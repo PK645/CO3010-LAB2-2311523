@@ -168,3 +168,19 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Shell.get
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+!SESSION 2025-09-24 16:16:14.915 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_VN
+Framework arguments:  -keyring /Users/khanh/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/khanh/.eclipse_keyring -data /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-09-24 16:16:22.691
+!MESSAGE Log4j2 initialized with config file /Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-09-24 16:16:32.067
+!MESSAGE Started RMI Server, listening on port 41342
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2025-09-24 16:16:32.073
+!MESSAGE ProjectImporter: mdfind -name lsregister didn't returned anything

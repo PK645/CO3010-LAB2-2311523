@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="led_index"/>
+		<item value="duration_2"/>
+		<item value="duration_1"/>
+		<item value="duration_0"/>
+		<item value="EN_"/>
+		<item value="htim"/>
+		<item value="seg_index"/>
+		<item value="hal_tim"/>
+	</list>
+	<list key="replacehistory">
+		<item value="seg7_index"/>
+		<item value="100"/>
+		<item value="50"/>
+		<item value="EN"/>
+		<item value="seg_index"/>
+		<item value="7seg_index"/>
+	</list>
+</section>
