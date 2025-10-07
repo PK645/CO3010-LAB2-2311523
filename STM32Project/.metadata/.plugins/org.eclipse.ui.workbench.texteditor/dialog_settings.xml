@@ -3,7 +3,11 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="seg7"/>
+		<item value="mx"/>
+		<item value="led_buffer"/>
 		<item value="led_index"/>
+		<item value="_0"/>
 		<item value="duration_2"/>
 		<item value="duration_1"/>
 		<item value="duration_0"/>
@@ -14,6 +18,7 @@
 	</list>
 	<list key="replacehistory">
 		<item value="seg7_index"/>
+		<item value="0"/>
 		<item value="100"/>
 		<item value="50"/>
 		<item value="EN"/>
