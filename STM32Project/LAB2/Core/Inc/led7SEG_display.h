@@ -1,0 +1,23 @@
+/*
+ * software_timer.h
+ *
+ *  Created on: Sep 24, 2025
+ *      Author: khanh
+ */
+
+#ifndef INC_LED7SEG_DISPLAY_H_
+#define INC_LED7SEG_DISPLAY_H_
+
+#include "main.h"
+#include "stm32f1xx_hal.h"
+
+
+#define LED_NUMBER 4
+
+extern int led_index;
+
+extern int led_buffer[LED_NUMBER];
+
+void display7SEG(int num);
+
+#endif /* INC_LED7SEG_DISPLAY_H_ */
