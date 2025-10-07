@@ -780,7 +780,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  80005bc:	f1b3 4f80 	cmp.w	r3, #1073741824	@ 0x40000000
  80005c0:	d10f      	bne.n	80005e2 <HAL_TIM_PeriodElapsedCallback+0x32>
     {
-        runTimer();  // cập nhật bộ đếm phần mềm
+        runTimer();
  80005c2:	f000 f857 	bl	8000674 <runTimer>
 
         // 10ms/time

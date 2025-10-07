@@ -264,7 +264,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     if (htim->Instance == TIM2) // TIM2 interrupt
     {
-        runTimer();  // cập nhật bộ đếm phần mềm
+        runTimer();
 
         // 10ms/time
         static int seg7_counter = 0;
