@@ -5,7 +5,6 @@
  *      Author: khanh
  */
 
-
 #include "software_timer.h"
 
 int timer0_counter = 0;
@@ -43,6 +42,12 @@ void runTimer() {
 		timer1_counter --;
 		if (timer1_counter <= 0) {
 			timer1_flag = 1;
+		}
+	}
+	if (timer2_counter > 0) {
+		timer2_counter --;
+		if (timer2_counter <= 0) {
+			timer2_flag = 1;
 		}
 	}
 }
