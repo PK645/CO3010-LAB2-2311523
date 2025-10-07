@@ -103,11 +103,10 @@ int main(void)
   HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
   HAL_TIM_Base_Start_IT(&htim2);
-
   setTimer0(DURATION_0);
   setTimer1(DURATION_1);
   setTimer2(DURATION_2);
-  setTimer3(DURATION_3);
+  setTimer2(DURATION_3);
   /* USER CODE END 2 */
   int hour = 15, minute = 8, second = 50;
   /* Infinite loop */
@@ -117,7 +116,6 @@ int main(void)
   	  updateClockBuffer();
   	  update7SEG(led_index);
   	  display7SEG(led_buffer[led_index]);
-
   	  if (timer0_flag == 1) {
   		  setTimer0(DURATION_0);
   		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);

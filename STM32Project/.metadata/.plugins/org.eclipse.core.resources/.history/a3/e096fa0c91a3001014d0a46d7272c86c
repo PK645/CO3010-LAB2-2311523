@@ -33,9 +33,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define DURATION_0 100
-#define DURATION_1 25
+#define DURATION_1 50
 #define DURATION_2 100
-#define DURATION_3 100
 
 /* USER CODE END PD */
 
@@ -49,7 +48,7 @@ TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 int led_index = 0;
-int led_buffer[LED_NUMBER] = {0, 0, 0, 0};
+int led_buffer[LED_NUMBER] = {1, 2, 3, 4};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -103,21 +102,17 @@ int main(void)
   HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
   HAL_TIM_Base_Start_IT(&htim2);
-
   setTimer0(DURATION_0);
   setTimer1(DURATION_1);
   setTimer2(DURATION_2);
-  setTimer3(DURATION_3);
   /* USER CODE END 2 */
-  int hour = 15, minute = 8, second = 50;
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
     {
-  	  updateClockBuffer();
   	  update7SEG(led_index);
   	  display7SEG(led_buffer[led_index]);
-
   	  if (timer0_flag == 1) {
   		  setTimer0(DURATION_0);
   		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
@@ -129,21 +124,6 @@ int main(void)
   	  if (timer2_flag == 1) {
   		  setTimer2(DURATION_2);
   		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-  	  }
-  	  if (timer3_flag == 1) {
-  		  setTimer3(DURATION_3);
-  		  second ++;
-  		  if (second >= 60) {
-  			  second = 0;
-  			  minute ++;
-  		  }
-  		  if (minute >= 60) {
-  			  minute = 0;
-  			  hour ++;
-  		  }
-  		  if (hour >= 24) {
-  			  hour = 0;
-  		  }
   	  }
       /* USER CODE END WHILE */
 
@@ -282,7 +262,21 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
+    if (htim->Instance == TIM2) // TIM2 interrupt
+    {
         runTimer();
+
+        // 10ms/time
+        static int seg7_counter = 0;
+        seg7_counter++;
+
+        // 1hz = 1000ms = 4 led -> 250ms/led
+        // 10ms/time => 25 time * 10ms = 250ms
+        if (seg7_counter >= 25) {
+            seg7_counter = 0;
+            update7SEG();
+        }
+    }
 }
 /* USER CODE END 4 */
 
