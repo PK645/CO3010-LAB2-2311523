@@ -769,3 +769,1171 @@ arm-none-eabi-size  LAB2.elf
    7464	     40	   1656	   9160	   23c8	LAB2.elf
 Finished building: default.size.stdout
  
+08:49:09 **** Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:178:54: error: 'EN0_Pina' undeclared (first use in this function); did you mean 'EN0_Pin'?
+  178 |                     HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pina, GPIO_PIN_SET);
+      |                                                      ^~~~~~~~
+      |                                                      EN0_Pin
+../Core/Src/main.c:178:54: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+08:49:36 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7604	     40	   1664	   9308	   245c	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+11:21:54 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7700	     40	   1672	   9412	   24c4	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+16:35:39 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:64:34: error: 'led_index' undeclared (first use in this function); did you mean 'seg7_index'?
+   64 |           display7SEG(led_buffer[led_index]);
+      |                                  ^~~~~~~~~
+      |                                  seg7_index
+../Core/Src/main.c:64:34: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:66:29: error: 'DURATION_0' undeclared (first use in this function)
+   66 |                   setTimer0(DURATION_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:67:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   67 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:67:53: error: 'LED_Pin' undeclared (first use in this function)
+   67 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      |                                                     ^~~~~~~
+../Core/Src/main.c:70:29: error: 'DURATION_1' undeclared (first use in this function)
+   70 |                   setTimer1(DURATION_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:74:45: error: 'EN_0_GPIO_Port' undeclared (first use in this function); did you mean 'EN0_GPIO_Port'?
+   74 |                           HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, GPIO_PIN_SET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN0_GPIO_Port
+../Core/Src/main.c:74:61: error: 'EN_0_Pin' undeclared (first use in this function); did you mean 'EN0_Pin'?
+   74 |                           HAL_GPIO_WritePin(EN_0_GPIO_Port, EN_0_Pin, GPIO_PIN_SET);
+      |                                                             ^~~~~~~~
+      |                                                             EN0_Pin
+../Core/Src/main.c:75:45: error: 'EN_1_GPIO_Port' undeclared (first use in this function); did you mean 'EN1_GPIO_Port'?
+   75 |                           HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, GPIO_PIN_RESET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN1_GPIO_Port
+../Core/Src/main.c:75:61: error: 'EN_1_Pin' undeclared (first use in this function); did you mean 'EN1_Pin'?
+   75 |                           HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, GPIO_PIN_RESET);
+      |                                                             ^~~~~~~~
+      |                                                             EN1_Pin
+../Core/Src/main.c:76:45: error: 'EN_2_GPIO_Port' undeclared (first use in this function); did you mean 'EN2_GPIO_Port'?
+   76 |                           HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN2_GPIO_Port
+../Core/Src/main.c:76:61: error: 'EN_2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+   76 |                           HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
+      |                                                             ^~~~~~~~
+      |                                                             EN2_Pin
+../Core/Src/main.c:77:45: error: 'EN_3_GPIO_Port' undeclared (first use in this function); did you mean 'EN3_GPIO_Port'?
+   77 |                           HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN3_GPIO_Port
+../Core/Src/main.c:77:61: error: 'EN_3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
+   77 |                           HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
+      |                                                             ^~~~~~~~
+      |                                                             EN3_Pin
+../Core/Src/main.c:104:13: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
+  104 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+      |             timer1_flag
+../Core/Src/main.c:105:27: error: 'DURATION_2' undeclared (first use in this function)
+  105 |                 setTimer2(DURATION_2);
+      |                           ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:37:01 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:64:34: error: 'led_index' undeclared (first use in this function); did you mean 'seg7_index'?
+   64 |           display7SEG(led_buffer[led_index]);
+      |                                  ^~~~~~~~~
+      |                                  seg7_index
+../Core/Src/main.c:64:34: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:66:29: error: 'DURATION_0' undeclared (first use in this function)
+   66 |                   setTimer0(DURATION_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:67:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   67 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:67:53: error: 'LED_Pin' undeclared (first use in this function)
+   67 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      |                                                     ^~~~~~~
+../Core/Src/main.c:70:29: error: 'DURATION_1' undeclared (first use in this function)
+   70 |                   setTimer1(DURATION_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:75:45: error: 'EN_1_GPIO_Port' undeclared (first use in this function); did you mean 'EN1_GPIO_Port'?
+   75 |                           HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, GPIO_PIN_RESET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN1_GPIO_Port
+../Core/Src/main.c:75:61: error: 'EN_1_Pin' undeclared (first use in this function); did you mean 'EN1_Pin'?
+   75 |                           HAL_GPIO_WritePin(EN_1_GPIO_Port, EN_1_Pin, GPIO_PIN_RESET);
+      |                                                             ^~~~~~~~
+      |                                                             EN1_Pin
+../Core/Src/main.c:76:45: error: 'EN_2_GPIO_Port' undeclared (first use in this function); did you mean 'EN2_GPIO_Port'?
+   76 |                           HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN2_GPIO_Port
+../Core/Src/main.c:76:61: error: 'EN_2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+   76 |                           HAL_GPIO_WritePin(EN_2_GPIO_Port, EN_2_Pin, GPIO_PIN_SET);
+      |                                                             ^~~~~~~~
+      |                                                             EN2_Pin
+../Core/Src/main.c:77:45: error: 'EN_3_GPIO_Port' undeclared (first use in this function); did you mean 'EN3_GPIO_Port'?
+   77 |                           HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             EN3_GPIO_Port
+../Core/Src/main.c:77:61: error: 'EN_3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
+   77 |                           HAL_GPIO_WritePin(EN_3_GPIO_Port, EN_3_Pin, GPIO_PIN_SET);
+      |                                                             ^~~~~~~~
+      |                                                             EN3_Pin
+../Core/Src/main.c:104:13: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
+  104 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+      |             timer1_flag
+../Core/Src/main.c:105:27: error: 'DURATION_2' undeclared (first use in this function)
+  105 |                 setTimer2(DURATION_2);
+      |                           ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:39:21 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+../Core/Src/main.c:47:16: error: 'led_number' undeclared here (not in a function)
+   47 | int led_buffer[led_number] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:11: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  101 |           display7SEG(led_buffer[led_index]);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:101:34: error: 'led_index' undeclared (first use in this function); did you mean 'seg7_index'?
+  101 |           display7SEG(led_buffer[led_index]);
+      |                                  ^~~~~~~~~
+      |                                  seg7_index
+../Core/Src/main.c:101:34: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:102:15: error: 'timer0_flag' undeclared (first use in this function)
+  102 |           if (timer0_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:103:19: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+  103 |                   setTimer0(duration_0);
+      |                   ^~~~~~~~~
+../Core/Src/main.c:103:29: error: 'duration_0' undeclared (first use in this function)
+  103 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:104:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:104:53: error: 'LED_RED' undeclared (first use in this function)
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                                     ^~~~~~~
+../Core/Src/main.c:106:15: error: 'timer1_flag' undeclared (first use in this function)
+  106 |           if (timer1_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:107:19: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+  107 |                   setTimer1(DURATION_1);
+      |                   ^~~~~~~~~
+../Core/Src/main.c:107:29: error: 'DURATION_1' undeclared (first use in this function)
+  107 |                   setTimer1(DURATION_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:141:13: error: 'timer2_flag' undeclared (first use in this function)
+  141 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:142:17: warning: implicit declaration of function 'setTimer2' [-Wimplicit-function-declaration]
+  142 |                 setTimer2(DURATION_2);
+      |                 ^~~~~~~~~
+../Core/Src/main.c:142:27: error: 'DURATION_2' undeclared (first use in this function)
+  142 |                 setTimer2(DURATION_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:151:1: error: expected identifier or '(' before '}' token
+  151 | }
+      | ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:286:9: warning: implicit declaration of function 'runTimer' [-Wimplicit-function-declaration]
+  286 |         runTimer();
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:40:54 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:47:16: error: 'led_number' undeclared here (not in a function)
+   47 | int led_buffer[led_number] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:11: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  101 |           display7SEG(led_buffer[seg7_index]);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:102:15: error: 'timer0_flag' undeclared (first use in this function)
+  102 |           if (timer0_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:102:15: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:103:19: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+  103 |                   setTimer0(duration_0);
+      |                   ^~~~~~~~~
+../Core/Src/main.c:103:29: error: 'duration_0' undeclared (first use in this function)
+  103 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:104:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:104:53: error: 'LED_RED' undeclared (first use in this function)
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                                     ^~~~~~~
+../Core/Src/main.c:106:15: error: 'timer1_flag' undeclared (first use in this function)
+  106 |           if (timer1_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:107:19: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+  107 |                   setTimer1(duration_1);
+      |                   ^~~~~~~~~
+../Core/Src/main.c:107:29: error: 'duration_1' undeclared (first use in this function)
+  107 |                   setTimer1(duration_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:141:13: error: 'timer2_flag' undeclared (first use in this function)
+  141 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:142:17: warning: implicit declaration of function 'setTimer2' [-Wimplicit-function-declaration]
+  142 |                 setTimer2(duration_2);
+      |                 ^~~~~~~~~
+../Core/Src/main.c:142:27: error: 'duration_2' undeclared (first use in this function)
+  142 |                 setTimer2(duration_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:151:1: error: expected identifier or '(' before '}' token
+  151 | }
+      | ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:286:9: warning: implicit declaration of function 'runTimer' [-Wimplicit-function-declaration]
+  286 |         runTimer();
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:41:18 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:47:5: error: variably modified 'led_buffer' at file scope
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |     ^~~~~~~~~~
+../Core/Src/main.c:47:34: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                  ^
+../Core/Src/main.c:47:34: note: (near initialization for 'led_buffer')
+../Core/Src/main.c:47:37: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                     ^
+../Core/Src/main.c:47:37: note: (near initialization for 'led_buffer')
+../Core/Src/main.c:47:40: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                        ^
+../Core/Src/main.c:47:40: note: (near initialization for 'led_buffer')
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:11: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  101 |           display7SEG(led_buffer[seg7_index]);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:102:15: error: 'timer0_flag' undeclared (first use in this function)
+  102 |           if (timer0_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:102:15: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:103:19: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+  103 |                   setTimer0(duration_0);
+      |                   ^~~~~~~~~
+../Core/Src/main.c:103:29: error: 'duration_0' undeclared (first use in this function)
+  103 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:104:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:104:53: error: 'LED_RED' undeclared (first use in this function)
+  104 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                                     ^~~~~~~
+../Core/Src/main.c:106:15: error: 'timer1_flag' undeclared (first use in this function)
+  106 |           if (timer1_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:107:19: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+  107 |                   setTimer1(duration_1);
+      |                   ^~~~~~~~~
+../Core/Src/main.c:107:29: error: 'duration_1' undeclared (first use in this function)
+  107 |                   setTimer1(duration_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:141:13: error: 'timer2_flag' undeclared (first use in this function)
+  141 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:142:17: warning: implicit declaration of function 'setTimer2' [-Wimplicit-function-declaration]
+  142 |                 setTimer2(duration_2);
+      |                 ^~~~~~~~~
+../Core/Src/main.c:142:27: error: 'duration_2' undeclared (first use in this function)
+  142 |                 setTimer2(duration_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:151:1: error: expected identifier or '(' before '}' token
+  151 | }
+      | ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:286:9: warning: implicit declaration of function 'runTimer' [-Wimplicit-function-declaration]
+  286 |         runTimer();
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:42:17 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:47:5: error: variably modified 'led_buffer' at file scope
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |     ^~~~~~~~~~
+../Core/Src/main.c:47:34: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                  ^
+../Core/Src/main.c:47:34: note: (near initialization for 'led_buffer')
+../Core/Src/main.c:47:37: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                     ^
+../Core/Src/main.c:47:37: note: (near initialization for 'led_buffer')
+../Core/Src/main.c:47:40: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                        ^
+../Core/Src/main.c:47:40: note: (near initialization for 'led_buffer')
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:94:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   94 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:94:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:94:36: error: 'LED_Pin' undeclared (first use in this function)
+   94 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:101:3: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+  101 |   setTimer0(DURATION_0);
+      |   ^~~~~~~~~
+../Core/Src/main.c:101:13: error: 'DURATION_0' undeclared (first use in this function)
+  101 |   setTimer0(DURATION_0);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:102:3: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+  102 |   setTimer1(DURATION_1);
+      |   ^~~~~~~~~
+../Core/Src/main.c:102:13: error: 'DURATION_1' undeclared (first use in this function)
+  102 |   setTimer1(DURATION_1);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:103:3: warning: implicit declaration of function 'setTimer2' [-Wimplicit-function-declaration]
+  103 |   setTimer2(DURATION_2);
+      |   ^~~~~~~~~
+../Core/Src/main.c:103:13: error: 'DURATION_2' undeclared (first use in this function)
+  103 |   setTimer2(DURATION_2);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:110:11: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  110 |           display7SEG(led_buffer[seg7_index]);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:111:15: error: 'timer0_flag' undeclared (first use in this function)
+  111 |           if (timer0_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:112:29: error: 'duration_0' undeclared (first use in this function)
+  112 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:113:53: error: 'LED_RED' undeclared (first use in this function)
+  113 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                                     ^~~~~~~
+../Core/Src/main.c:115:15: error: 'timer1_flag' undeclared (first use in this function)
+  115 |           if (timer1_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:116:29: error: 'duration_1' undeclared (first use in this function)
+  116 |                   setTimer1(duration_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:150:13: error: 'timer2_flag' undeclared (first use in this function)
+  150 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:151:27: error: 'duration_2' undeclared (first use in this function)
+  151 |                 setTimer2(duration_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:160:1: error: expected identifier or '(' before '}' token
+  160 | }
+      | ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:295:9: warning: implicit declaration of function 'runTimer' [-Wimplicit-function-declaration]
+  295 |         runTimer();
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:42:48 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:47:5: error: variably modified 'led_buffer' at file scope
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |     ^~~~~~~~~~
+../Core/Src/main.c:47:34: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                  ^
+../Core/Src/main.c:47:34: note: (near initialization for 'led_buffer')
+../Core/Src/main.c:47:37: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                     ^
+../Core/Src/main.c:47:37: note: (near initialization for 'led_buffer')
+../Core/Src/main.c:47:40: warning: excess elements in array initializer
+   47 | int led_buffer[seg7_index] = {1, 2, 3, 0};
+      |                                        ^
+../Core/Src/main.c:47:40: note: (near initialization for 'led_buffer')
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:94:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   94 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:94:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:94:36: error: 'LED_RED' undeclared (first use in this function)
+   94 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:101:3: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+  101 |   setTimer0(duration_0);
+      |   ^~~~~~~~~
+../Core/Src/main.c:101:13: error: 'duration_0' undeclared (first use in this function)
+  101 |   setTimer0(duration_0);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:102:3: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+  102 |   setTimer1(duration_1);
+      |   ^~~~~~~~~
+../Core/Src/main.c:102:13: error: 'duration_1' undeclared (first use in this function)
+  102 |   setTimer1(duration_1);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:103:3: warning: implicit declaration of function 'setTimer2' [-Wimplicit-function-declaration]
+  103 |   setTimer2(duration_2);
+      |   ^~~~~~~~~
+../Core/Src/main.c:103:13: error: 'duration_2' undeclared (first use in this function)
+  103 |   setTimer2(duration_2);
+      |             ^~~~~~~~~~
+../Core/Src/main.c:110:11: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  110 |           display7SEG(led_buffer[seg7_index]);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:111:15: error: 'timer0_flag' undeclared (first use in this function)
+  111 |           if (timer0_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:115:15: error: 'timer1_flag' undeclared (first use in this function)
+  115 |           if (timer1_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:150:13: error: 'timer2_flag' undeclared (first use in this function)
+  150 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:160:1: error: expected identifier or '(' before '}' token
+  160 | }
+      | ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:295:9: warning: implicit declaration of function 'runTimer' [-Wimplicit-function-declaration]
+  295 |         runTimer();
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:45:30 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:44:16: error: 'LED_NUMBER' undeclared here (not in a function)
+   44 | int led_buffer[LED_NUMBER] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:91:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   91 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:91:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:91:36: error: 'LED_RED' undeclared (first use in this function)
+   91 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:98:3: warning: implicit declaration of function 'setTimer0' [-Wimplicit-function-declaration]
+   98 |   setTimer0(DURATION_0);
+      |   ^~~~~~~~~
+../Core/Src/main.c:99:3: warning: implicit declaration of function 'setTimer1' [-Wimplicit-function-declaration]
+   99 |   setTimer1(DURATION_1);
+      |   ^~~~~~~~~
+../Core/Src/main.c:100:3: warning: implicit declaration of function 'setTimer2' [-Wimplicit-function-declaration]
+  100 |   setTimer2(DURATION_2);
+      |   ^~~~~~~~~
+../Core/Src/main.c:107:11: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  107 |           display7SEG(led_buffer[seg7_index]);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c:107:34: error: 'seg7_index' undeclared (first use in this function); did you mean 'led_index'?
+  107 |           display7SEG(led_buffer[seg7_index]);
+      |                                  ^~~~~~~~~~
+      |                                  led_index
+../Core/Src/main.c:108:15: error: 'timer0_flag' undeclared (first use in this function)
+  108 |           if (timer0_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:109:29: error: 'duration_0' undeclared (first use in this function)
+  109 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:112:15: error: 'timer1_flag' undeclared (first use in this function)
+  112 |           if (timer1_flag == 1) {
+      |               ^~~~~~~~~~~
+../Core/Src/main.c:113:29: error: 'duration_1' undeclared (first use in this function)
+  113 |                   setTimer1(duration_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:147:13: error: 'timer2_flag' undeclared (first use in this function)
+  147 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:148:27: error: 'duration_2' undeclared (first use in this function)
+  148 |                 setTimer2(duration_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:157:1: error: expected identifier or '(' before '}' token
+  157 | }
+      | ^
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:292:9: warning: implicit declaration of function 'runTimer' [-Wimplicit-function-declaration]
+  292 |         runTimer();
+      |         ^~~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:47:16 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:46:16: error: 'LED_NUMBER' undeclared here (not in a function)
+   46 | int led_buffer[LED_NUMBER] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:93:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:93:36: error: 'LED_RED' undeclared (first use in this function)
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:109:34: error: 'seg7_index' undeclared (first use in this function); did you mean 'led_index'?
+  109 |           display7SEG(led_buffer[seg7_index]);
+      |                                  ^~~~~~~~~~
+      |                                  led_index
+../Core/Src/main.c:111:29: error: 'duration_0' undeclared (first use in this function)
+  111 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:115:29: error: 'duration_1' undeclared (first use in this function)
+  115 |                   setTimer1(duration_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:149:13: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
+  149 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+      |             timer1_flag
+../Core/Src/main.c:150:27: error: 'duration_2' undeclared (first use in this function)
+  150 |                 setTimer2(duration_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:159:1: error: expected identifier or '(' before '}' token
+  159 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:51:49 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:46:16: error: 'LED_NUMBER' undeclared here (not in a function)
+   46 | int led_buffer[LED_NUMBER] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:93:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:93:36: error: 'LED_RED' undeclared (first use in this function)
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:111:29: error: 'duration_0' undeclared (first use in this function)
+  111 |                   setTimer0(duration_0);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:115:29: error: 'duration_1' undeclared (first use in this function)
+  115 |                   setTimer1(duration_1);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:149:13: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
+  149 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+      |             timer1_flag
+../Core/Src/main.c:150:27: error: 'duration_2' undeclared (first use in this function)
+  150 |                 setTimer2(duration_2);
+      |                           ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:159:1: error: expected identifier or '(' before '}' token
+  159 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:52:27 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:46:16: error: 'LED_NUMBER' undeclared here (not in a function)
+   46 | int led_buffer[LED_NUMBER] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:93:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:93:36: error: 'LED_RED' undeclared (first use in this function)
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c:149:13: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
+  149 |         if (timer2_flag == 1) {
+      |             ^~~~~~~~~~~
+      |             timer1_flag
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:159:1: error: expected identifier or '(' before '}' token
+  159 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+16:53:11 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:46:16: error: 'LED_NUMBER' undeclared here (not in a function)
+   46 | int led_buffer[LED_NUMBER] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:93:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:93:36: error: 'LED_RED' undeclared (first use in this function)
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:159:1: error: expected identifier or '(' before '}' token
+  159 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+17:00:48 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c:46:16: error: 'LED_NUMBER' undeclared here (not in a function)
+   46 | int led_buffer[LED_NUMBER] = {1, 2, 3, 0};
+      |                ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                     ^~~~~~~~~~~~~
+      |                     SEG5_GPIO_Port
+../Core/Src/main.c:93:21: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:93:36: error: 'LED_RED' undeclared (first use in this function)
+   93 |   HAL_GPIO_WritePin(LED_GPIO_Port, LED_RED, GPIO_PIN_RESET);
+      |                                    ^~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:159:1: error: expected identifier or '(' before '}' token
+  159 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+17:02:38 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+  115 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:115:38: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:115:53: error: 'LED_RED' undeclared (first use in this function)
+  115 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_RED);
+      |                                                     ^~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:162:1: error: expected identifier or '(' before '}' token
+  162 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+17:03:00 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:162:1: error: expected identifier or '(' before '}' token
+  162 | }
+      | ^
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+17:03:19 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7768	     40	   1672	   9480	   2508	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+17:28:04 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7768	     40	   1672	   9480	   2508	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:28:34 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-size  LAB2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7768	     40	   1672	   9480	   2508	LAB2.elf
+Finished building: default.size.stdout
+ 
+17:31:19 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7696	     76	   1668	   9440	   24e0	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:40:37 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7696	     76	   1668	   9440	   24e0	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:42:21 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7668	     40	   1672	   9380	   24a4	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:45:47 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7712	     40	   1672	   9424	   24d0	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:47:48 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7844	     28	   1668	   9540	   2544	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:50:24 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7700	     28	   1668	   9396	   24b4	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+17:59:20 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7812	     28	   1668	   9508	   2524	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+18:05:23 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7840	     28	   1668	   9536	   2540	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+18:27:46 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7732	     28	   1668	   9428	   24d4	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+18:32:53 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7600	     76	   1668	   9344	   2480	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+18:37:08 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7600	     76	   1668	   9344	   2480	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+18:37:31 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7600	     76	   1668	   9344	   2480	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.bin
+Finished building: LAB2.hex
+ 
+ 
+Finished building: LAB2.list
+ 
+18:41:49 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:34: error: 'led_index' undeclared (first use in this function); did you mean 'seg7_index'?
+  110 |           display7SEG(led_buffer[led_index]);
+      |                                  ^~~~~~~~~
+      |                                  seg7_index
+../Core/Src/main.c:110:34: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:113:38: error: 'LED_GPIO_Port' undeclared (first use in this function); did you mean 'SEG5_GPIO_Port'?
+  113 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      |                                      ^~~~~~~~~~~~~
+      |                                      SEG5_GPIO_Port
+../Core/Src/main.c:113:53: error: 'LED_Pin' undeclared (first use in this function)
+  113 |                   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      |                                                     ^~~~~~~
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+18:42:36 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:57: error: 'LED_RED' undeclared (first use in this function)
+  113 |                   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED);
+      |                                                         ^~~~~~~
+../Core/Src/main.c:113:57: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+18:44:12 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:57: error: 'LED_RED' undeclared (first use in this function)
+  113 |                   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED);
+      |                                                         ^~~~~~~
+../Core/Src/main.c:113:57: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+18:44:47 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:57: error: 'LED_RED' undeclared (first use in this function)
+  113 |                   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED);
+      |                                                         ^~~~~~~
+../Core/Src/main.c:113:57: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:40: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j10 all" terminated with exit code 2. Build might be incomplete.
+18:45:24 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7680	     28	   1668	   9376	   24a0	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+18:47:06 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7680	     28	   1668	   9376	   24a0	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 
+18:51:28 **** Incremental Build of configuration Debug for project LAB2 ****
+make -j10 all 
+arm-none-eabi-gcc "../Core/Src/led7SEG_display.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led7SEG_display.d" -MT"Core/Src/led7SEG_display.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led7SEG_display.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LAB2.elf" @"objects.list"   -mcpu=cortex-m3 -T"/Users/khanh/CO3010/CO3010-LAB2-2311523/STM32Project/LAB2/STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LAB2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LAB2.elf
+ 
+arm-none-eabi-size  LAB2.elf 
+arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
+arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7800	     28	   1668	   9496	   2518	LAB2.elf
+Finished building: default.size.stdout
+ 
+Finished building: LAB2.hex
+Finished building: LAB2.bin
+ 
+ 
+Finished building: LAB2.list
+ 

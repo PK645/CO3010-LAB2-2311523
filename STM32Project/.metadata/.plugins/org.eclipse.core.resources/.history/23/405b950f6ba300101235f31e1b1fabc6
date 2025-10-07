@@ -1,0 +1,24 @@
+/*
+ * display7SEG.c
+ *
+ *  Created on: Sep 24, 2025
+ *      Author: khanh
+ */
+
+#include "led7SEG_display.h"
+
+uint8_t set7SEG[11] = {0x40, 0x79, 0x24, 0x30, 0x19, 0x12, 0x02, 0x78, 0x00, 0x10, 0x7F}; // bit patterns
+
+void display7SEG(int num) {
+    uint8_t pattern;
+    if (num >= 0 && num <= 9) {
+        pattern = set7SEG[num];
+    } else {
+        pattern = set7SEG[10]; // hiển thị dấu tắt hoặc lỗi
+    }
+    // Xóa chân PB0..PB6
+    GPIOB->ODR &= ~(0x7F);
+    // Gán pattern cho chân PB0..PB6
+    GPIOB->ODR |= pattern;
+}
+

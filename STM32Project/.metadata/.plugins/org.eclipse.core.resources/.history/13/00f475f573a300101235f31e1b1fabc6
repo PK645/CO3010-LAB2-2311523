@@ -1,0 +1,31 @@
+#include "led7SEG_display.h"
+#include "main.h"
+
+/*
+ * Mapping segment: bit0 = SEG0(PB0) ... bit6 = SEG6(PB6)
+ * Common ANODE: bit = 0 → sáng, bit = 1 → tắt
+ */
+const uint8_t seg_pattern[10] = {
+    0b1000000, // 0
+    0b1111001, // 1
+    0b0100100, // 2
+    0b0110000, // 3
+    0b0011001, // 4
+    0b0010010, // 5
+    0b0000010, // 6
+    0b1111000, // 7
+    0b0000000, // 8
+    0b0010000  // 9
+};
+
+void display7SEG(int num)
+{
+    if (num < 0 || num > 9) num = 0;
+    uint8_t pattern = seg_pattern[num];
+
+    // clear 7 bit thấp PB0–PB6
+    GPIOB->ODR &= ~0x7F;
+
+    // ghi pattern (active-low)
+    GPIOB->ODR |= pattern & 0x7F;
+}
