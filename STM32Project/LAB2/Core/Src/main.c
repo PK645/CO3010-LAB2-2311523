@@ -260,11 +260,23 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-int counter = 0;
-
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	runTimer();
+    if (htim->Instance == TIM2) // TIM2 interrupt
+    {
+        runTimer();  // cập nhật bộ đếm phần mềm
+
+        // 10ms/time
+        static int seg7_counter = 0;
+        seg7_counter++;
+
+        // 1hz = 1000ms = 4 led -> 250ms/led
+        // 10ms/time => 25 time * 10ms = 250ms
+        if (seg7_counter >= 25) {
+            seg7_counter = 0;
+            update7SEG();
+        }
+    }
 }
 /* USER CODE END 4 */
 

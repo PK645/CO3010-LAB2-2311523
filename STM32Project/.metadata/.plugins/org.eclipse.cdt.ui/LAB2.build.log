@@ -1,4 +1,4 @@
-19:19:00 **** Incremental Build of configuration Debug for project LAB2 ****
+19:29:32 **** Incremental Build of configuration Debug for project LAB2 ****
 make -j10 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -13,15 +13,15 @@ arm-none-eabi-objdump -h -S LAB2.elf  > "LAB2.list"
 arm-none-eabi-objcopy  -O ihex LAB2.elf  "LAB2.hex"
 arm-none-eabi-objcopy  -O binary LAB2.elf  "LAB2.bin"
    text	   data	    bss	    dec	    hex	filename
-   7828	     28	   1668	   9524	   2534	LAB2.elf
+   7872	     28	   1676	   9576	   2568	LAB2.elf
 Finished building: default.size.stdout
  
-Finished building: LAB2.bin
 Finished building: LAB2.hex
+Finished building: LAB2.bin
  
  
 Finished building: LAB2.list
  
 
-19:19:01 Build Finished. 0 errors, 1 warnings. (took 699ms)
+19:29:32 Build Finished. 0 errors, 1 warnings. (took 711ms)
 
