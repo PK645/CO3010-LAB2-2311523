@@ -115,7 +115,6 @@ int main(void)
 
   while (1)
     {
-	  updateClockBuffer();
   	  update7SEG(led_index);
   	  display7SEG(led_buffer[led_index]);
 
@@ -145,6 +144,7 @@ int main(void)
   		  if (hour >= 24) {
   			  hour = 0;
   		  }
+  	  	  updateClockBuffer();
   	  }
       /* USER CODE END WHILE */
 

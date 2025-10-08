@@ -67,8 +67,7 @@ void update7SEG(int index)
     }
 }
 
-int hour;
-int minute;
+int hour = 15, minute = 8, second = 55;
 
 void updateClockBuffer() {
     led_buffer[0] = hour / 10;

@@ -111,11 +111,9 @@ int main(void)
   /* USER CODE END 2 */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int hour = 15, minute = 8, second = 55;
 
   while (1)
     {
-	  updateClockBuffer();
   	  update7SEG(led_index);
   	  display7SEG(led_buffer[led_index]);
 
@@ -145,6 +143,7 @@ int main(void)
   		  if (hour >= 24) {
   			  hour = 0;
   		  }
+  	  	  updateClockBuffer();
   	  }
       /* USER CODE END WHILE */
 

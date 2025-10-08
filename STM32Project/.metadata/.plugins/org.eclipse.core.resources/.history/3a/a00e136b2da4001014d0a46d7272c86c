@@ -145,6 +145,7 @@ int main(void)
   		  if (hour >= 24) {
   			  hour = 0;
   		  }
+  	  	  updateClockBuffer();
   	  }
       /* USER CODE END WHILE */
 

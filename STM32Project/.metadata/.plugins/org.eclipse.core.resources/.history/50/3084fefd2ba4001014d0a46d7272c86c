@@ -69,7 +69,7 @@ void update7SEG(int index)
 
 int hour;
 int minute;
-
+int second;
 void updateClockBuffer() {
     led_buffer[0] = hour / 10;
     led_buffer[1] = hour % 10;
