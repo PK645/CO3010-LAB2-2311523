@@ -156,7 +156,7 @@ int main(void)
       if (led_index == 2 || led_index == 0) {
           HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
       }
-
+//            update7SEG(led_index++);
       update7SEG(led_index);
       display7SEG(led_buffer[led_index++]);
       if (led_index > 3) {
