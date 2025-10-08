@@ -33,11 +33,11 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define DURATION_0 100
+#define DURATION_0 10
 #define DURATION_1 25
-#define DURATION_2 100
-#define DURATION_3 100
-#define DURATION_4 5
+#define DURATION_2 10
+#define DURATION_3 10
+#define DURATION_4 10
 
 #define RUN_TIME 100
 
@@ -133,6 +133,7 @@ int main(void)
   	  updateClockBuffer();
   	  update7SEG(led_index);
   	  display7SEG(led_buffer[led_index]);
+
   	  if (timer0_flag == 1) {
   		  setTimer0(DURATION_0);
   		  HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
