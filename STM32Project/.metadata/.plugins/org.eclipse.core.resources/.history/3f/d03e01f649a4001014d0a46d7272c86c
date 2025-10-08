@@ -41,9 +41,6 @@
 
 #define RUN_TIME 100
 
-#define DURATION_MATRIX_REFRESH 2   // 2ms: refresh speed
-#define DURATION_MATRIX_SCROLL 150  // 150ms: scroll speed
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -58,14 +55,11 @@ TIM_HandleTypeDef htim2;
 
 int led_index = 0;
 int matrix_index = 0;
-int matrix_col = 0;
-int matrix_shift = 0;
-
+int matrix_offset = 0;
 int led_buffer[LED_NUMBER] = {0,0,0,0};
 int hour = 15;
 int minute = 8;
 int second = 50;
-
 
 /* USER CODE BEGIN PV */
 const int MAX_LED = 4;
@@ -129,8 +123,7 @@ int main(void)
   setTimer1(DURATION_1);
   setTimer2(DURATION_2);
   setTimer3(DURATION_3);
-  setTimer4(DURATION_MATRIX_REFRESH);  // scan matrix
-  setTimer5(DURATION_MATRIX_SCROLL);   // shift char
+  setTimer4(DURATION_4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -169,22 +162,13 @@ int main(void)
   		  }
   	  }
 
-  	  // ===== LED MATRIX refresh (fast scan) =====
   	  if (timer4_flag == 1) {
-  		  setTimer4(DURATION_MATRIX_REFRESH);
-
-  		  updateLEDMatrix(matrix_col);
-
-  		  displayLEDMatrix('A', (matrix_col + matrix_shift) % 8);
-
-  	    matrix_col = (matrix_col + 1) % 8;
-  	}
-
-  	// ===== LED MATRIX animation (scroll) =====
-  	if (timer5_flag == 1) {
-  	    setTimer5(DURATION_MATRIX_SCROLL);
-  	    matrix_shift = (matrix_shift + 1) % 8;
-  	}
+  		  setTimer4(DURATION_4);
+  	      displayLEDMatrix('A', matrix_index);
+  	      updateLEDMatrix(matrix_index);
+  	      matrix_index++;
+  	      if (matrix_index >= 8) matrix_index = 0;
+  	    }
       /* USER CODE END WHILE */
 
       /* USER CODE BEGIN 3 */
