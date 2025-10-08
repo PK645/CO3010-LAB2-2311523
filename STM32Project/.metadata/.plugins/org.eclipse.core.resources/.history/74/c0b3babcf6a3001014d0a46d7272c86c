@@ -37,8 +37,6 @@
 #define DURATION_2 100
 #define DURATION_3 100
 
-#define RUN_TIME 100
-
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,12 +49,7 @@ TIM_HandleTypeDef htim2;
 
 /* USER CODE BEGIN PV */
 int led_index = 0;
-int led_buffer[LED_NUMBER] = {1, 2, 3, 4};
-
-/* USER CODE BEGIN PV */
-const int MAX_LED = 4;
-int counter = RUN_TIME;
-
+int led_buffer[LED_NUMBER] = {0, 0, 0, 0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -116,6 +109,7 @@ int main(void)
   setTimer2(DURATION_2);
   setTimer3(DURATION_3);
   /* USER CODE END 2 */
+  int hour = 15, minute = 8, second = 50;
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -150,26 +144,18 @@ int main(void)
   		  if (hour >= 24) {
   			  hour = 0;
   		  }
-          updateClockBuffer();
-      }
-      HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-      if (led_index == 2 || led_index == 0) {
-          HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-      }
-//            update7SEG(led_index++);
-      update7SEG(led_index);
-      display7SEG(led_buffer[led_index++]);
-      if (led_index > 3) {
-          led_index = 0;
-      }
-      setTimer0(RUN_TIME);
+  	  }
+      /* USER CODE END WHILE */
+
+      /* USER CODE BEGIN 3 */
+    }
+    /* USER CODE END 3 */
   }
-}
 
 /**
-* @brief System Clock Configuration
-* @retval None
-*/
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
