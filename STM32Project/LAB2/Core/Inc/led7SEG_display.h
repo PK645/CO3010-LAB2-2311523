@@ -4,21 +4,26 @@
 #include "main.h"
 #include "stm32f1xx_hal.h"
 
-
 #define LED_NUMBER 4
+#define LED_MATRIX 8
 
 extern int led_index;
-
 extern int led_buffer[LED_NUMBER];
 
 void display7SEG(int num);
-
 void update7SEG(int index);
 
+void updateClockBuffer();
 extern int hour;
 extern int minute;
 extern int second;
 
-void updateClockBuffer();
+extern int matrix_index;
+extern int matrix_offset;
+
+
+void displayLEDMatrix(char c, int index);
+void updateLEDMatrix(int index);
+void LEDMatrix_Init(void);
 
 #endif /* INC_LED7SEG_DISPLAY_H_ */

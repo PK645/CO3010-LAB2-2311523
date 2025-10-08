@@ -1,3 +1,6 @@
 ../Core/Src/led7SEG_display.c:23:6:display7SEG	3
 ../Core/Src/led7SEG_display.c:38:6:update7SEG	5
-../Core/Src/led7SEG_display.c:74:6:updateClockBuffer	1
+../Core/Src/led7SEG_display.c:70:6:updateClockBuffer	1
+../Core/Src/led7SEG_display.c:169:6:displayLEDMatrix	6
+../Core/Src/led7SEG_display.c:188:6:updateLEDMatrix	4
+../Core/Src/led7SEG_display.c:199:6:LEDMatrix_Init	1
